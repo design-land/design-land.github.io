@@ -1,548 +1,818 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/icon.jpg" />
-    <title>Behance、Pinterest，最快最爽用菜刀； – 上Behance、Pinterest用菜刀</title>
-    <script src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/js/layer/layer.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168931513-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>中国设计师必备神器，秒开Pinterest、Behance、Dribbble、Artstation等全球10000+设计网站，4000TB设计素材干货免费下载</title>
+		<meta name="keywords" content="Pinterest, Behance, Dribbble, Artstation, 素材, 模版">
+		<meta name="description" content="中国设计师必备神器，秒开Pinterest、Behance、Dribbble、Artstation等全球10000+设计网站，4000TB设计素材干货免费下载">
+		<!-- 合并 ffmpeg  -safe 0 -r 30 -re -f concat -i list.txt -vf scale=1366x720 -an bg.mp4 -->
+		<!-- 切TS ./hls.sh -i bg.mp4 -s 5 -->
+		<!-- 首帧图片 ffmpeg -i 1.mp4  -frames:v 1 -q 1 vc.jpeg -->
+		<!-- 找黑边 ffmpeg -i 6.mp4 -vf "cropdetect=24:16:0" -f null - -->
+		<!-- 裁黑边 ffmpeg -i 6.mp4 -vf "crop=1280:576:0:70" 6_2.mp4 -->
 
-        gtag('config', 'UA-168931513-2');
-    </script>
 
-    <style>
-        body{
-            font-family: 'Open Sans', -apple-system,Helvetica Neue,Helvetica,Roboto,Arial,"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        @font-face {
-            font-family: Abel;
-            src: url(https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/abel.ttf)
-        }
-        div.nav_item{float: right;margin-right: 200px;color: #fff;line-height: 38px;height: 38px;font-size: 14px;}
-        div.nav_item a{color: #ccc;text-decoration: none}
-        div.nav_item a:hover{color: #fff;}
-        td.num{font-family: Abel, sans-serif;font-size: 50px;color: #12e0b9;text-align: center;width: 33.33%}
-        hr.t1{background-color:#12e0b9;width:248px;padding-top: 3px;margin-top:35px;margin-bottom: 25px; border: none;}
-        td.pt1{padding: 0 20px; }
-        div.pt1_logo{height: 48px;width: 48px;background-color:#12e0b9;float: left;padding: 12px 0 0 12px; }
-        div.pt1_title{padding-left: 80px;font-size: 20px;}
-        span.pt1_content{font-size: 14px;display: inline-block;padding-top: 10px;color: #6a6a6f;line-height: 25px;}
-        tr.tr_logo{text-align: center;}
-        tr.tr_logo td{ width: 14.28%;padding-top: 60px;}
-        div.card{filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6;width: 100px;height: 72px;padding-top: 28px; background-color: #000;border-radius: 50px; margin: 0 auto;}
-        div.card img{filter:brightness(1.2);}
-        div.card_full{position: relative;}
-        div.card_con{height: 230px;padding: 25px 28px;}
-        div.card_title{line-height: 50px;font-size: 20px;padding-top: 10px}
-        div.card_desc{font-size: 14px;line-height: 24px;}
-        div.card_title1{padding-top: 120px;font-size: 20px;}
-        span.card_desc1{font-size: 14px;line-height: 50px;}
-        td.td_card{height: 280px;width: 33%}
-        div.comment_con{padding: 20px;border-radius: 6px;background-color: #F7F7F9; border: none;width: 274px;height: 190px;font-size: 16px;line-height: 27px;color:#3a3a3f}
-        div.comment_author{float: left;text-align: left;padding-left: 15px;font-size: 18px;padding-top: 8px;line-height: 22px;}
-        div.download_win{float: left; cursor:pointer; height:54px; color:#fff;background-color:#3b82ff;line-height:54px;width:220px; text-align:center;border-radius:4px;font-size: 16px;}
-        div.download_win:hover{background-color:#689efd;}
-        div.download_mac{margin: 0 30px; cursor:pointer;float: left;  height:54px; color:#fff;background-color:#3b82ff;line-height:54px;width:220px; text-align:center;border-radius:4px;font-size: 16px;}
-        div.download_mac:hover{background-color:#689efd;}
-        div.download_mobile{float: left;  height:54px; border: 1px solid #ccc;line-height:54px;width:220px; text-align:center;border-radius:4px;font-size: 16px;}
-        hr.blue{border: none;background-color: #12e0b9; width: 220px;padding-top: 3px;}
-        td.sub_title{font-size:36px;color: #3a3a3f;text-align: center;padding-bottom: 10px;}
-        .video_con td{width: 50%;}
-        .video_con div{cursor: pointer; height: 48px;color: #fff;border-radius: 4px;line-height: 48px;width: 210px;}
-        .video_con div:hover{filter:brightness(1.2);}
-        div.div_start{filter:brightness(1); cursor: pointer;float: left; height: 48px; color: #fff;  line-height: 48px; width: 136px; text-align: center; border-radius: 4px;}
-        div.div_start:hover{filter:brightness(1.2);}
-    </style>
-</head>
-<body>
-<body style="margin:0;padding:0;background-color: #fff;">
+		<style>
+			@media  {
+				min-width: 1366px;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+			}
 
-<div style="height:38px;border-bottom:1px solid #e4e3de;background-color: #333333;display:none;">
-    <img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/icon.png" height="20px;" style="padding-top: 7px;float: left;padding-left: 200px;">
-    <div style="float: left;padding-left: 5px;color:#fff;line-height: 38px;height: 38px; font-size: 14px;">
-        Caidao
-    </div>
-    <div class="nav_item" >
-        <a id="a_intro" href="#intro">工具介绍</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="a_teach" href="#teach">使用教程</a></div>
-</div>
-<div style="height: 112px; ">
-    <table style="width:980px;margin:0 auto" border="0">
-    <tr>
-        <td style="padding-left: 20px;padding-top: 10px;"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/33495790_3-1.png" height="90"></td>
-        <td width="400px"><span style="font-size: 24px;color: #3a3a3f">没有对比 哪知道差距</span><br>
-            <span style="color: #7a7a6f;font-size: 14px;">Behancet和Pinterset有一种魔力，对“生活态度的追求”</span></td>
-    </tr>
-    </table>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: #000 !important;
+				text-align: center;
+				font-family: 'proxima-nova', Helvetica;
+			}
 
-</div>
 
-<div style="height: 424px;background-color: #333;">
-    <table style="width:980px;margin:0 auto" border="0">
-    <tr>
-    <td style="padding:48px 0 0 30px;">
-        <div style="height: 455px; overflow: hidden">
-        <span style="color: #fff;font-size: 48px;">Behance Pinterest 最快 最爽用菜刀</span><br>
-        <hr style="width: 300px; float: left;padding-top: 1px;margin-top: 25px;" color="#de501d" />
-        <span style="display: block;padding-top: 30px;color: #fff;font-size: 20px;line-height: 34px;">
-            <br>
-            免费体验  15 天<br>
-            会员仅 ￥7.00元 /月<br>
-            不限终端数量 全公司可用 设计师神器
-        </span>
-        <div style="margin-top: 28px;">
-        <div href="#div_download" id="div_start" class="div_start" style="background-color:#de501e;">
-            开始使用
-        </div>
-        <div  class="div_start video_intro" style="margin-left: 20px;  background-color:#e29f36; ">
-            观看演示
-        </div>
-        </div>
-        <img style="position: relative;top:-160px;left: 130px;" src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/main-image.png">
-        </div>
-    </td>
-    </tr>
-    </table>
+			#mainlogo {
+				position: absolute;
+				display: block;
+				width: 90px;
+				height: 30px;
+				background: url('icon.png') no-repeat;
+				background-size: 32px,32px;
+				font-size: 16px;
+				top: 10px;
+				left:5%;
+				font-family: 'proxima-nova', Helvetica;
+				color: #fff;
+				text-align: left;
+				padding: 10px 0 0 30px;
+				opacity: 0.5;
+				
+			}
 
-</div>
+			#container {
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
 
-<div style="padding-top: 100px;" name="div_download">
-    <table style="width:980px;margin:0 auto" border="0">
-    <tr>
-        <td style="padding-left: 135px;">
-            <div class="download_win"  ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/download.png" width="15">&nbsp;&nbsp;免费下载 windows 版 </div>
-            <div class="download_mac"  ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/download.png" width="15">&nbsp;&nbsp;免费下载 MacOS 版 </div>
-            <div class="download_mobile"  >手机客户端 </div>
+			#background_video {
+				position: absolute;
+				display: block !important;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				margin: auto;
+				min-height: 50%;
+				min-width: 50%;
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
 
-        </td>
-    </tr>
-        <tr>
-            <td style="padding-left: 155px;font-size: 14px;color: #6a6a6f;padding-top: 10px;">
-                <div  style="width: 220px;float: left;">支持 Win7-Win10，64 位系统</div>
-                <div  style="width: 220px;float: left;margin: 0 50px 0 35px; ">支持 MacOS 10.12 ​以上系统</div>
-                    <div  style="width: 220px;float: left;">安装电脑版后扫码​安装<div>
-            </td>
-        </tr>
-    </table>
-</div>
+			#video_cover {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
 
-<div style="margin-top: 30px;" name="intro" >
-    <table style="width:980px;margin:0 auto" border="0">
-        <tr>
-            <td class="num num_all">--</td>
-            <td class="num num_today">--</td>
-            <td class="num num_user">--</td>
-        </tr>
-        <tr style="text-align: center;font-size: 22px;color: #54595f">
-            <td>全网已加速图片数</td><td>今天加速图片</td><td>体验用户数</td>
-        </tr>
-        <tr style="vertical-align: top;">
-            <td class="pt1"><hr class="t1" />
-            <div class="pt1_logo" ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/be.png"></div>
-              <div class="pt1_title">Adobe 全家桶 18-20版<br><span class="pt1_content" >Adobe公司全家桶完美汉化破解版，2018、2019、2020版全部版本，Win 和 Mac 双操作系统</span></div>
-            </td>
-            <td class="pt1"><hr class="t1" />
-                <div class="pt1_logo" ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/pinterest.png"></div>
-                <div class="pt1_title">80000+ 美术字体<br><span class="pt1_content" >字体包括常用、海报、毛笔、设计、报刊、书法、艺术，等中英文字体。支持 Win 和 Mac</span></div>
-            </td>
-            <td class="pt1"><hr class="t1" />
-                <div class="pt1_logo" ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/dribbble.png"></div>
-                <div class="pt1_title">3000TB 资源干货<br><span class="pt1_content" >节日、标签、LOGO、展架、商标、简历、餐饮、DM、PSD及矢量效果图，全站3000TB资源</span></div>
-            </td>
-        </tr>
-    </table>
-</div>
-<div><hr style="border: none;background-color: #eee;padding-top: 1px;margin: 50px 0 30px 0;" /></div>
-<div >
-    <table style="width:980px;margin:0 auto" border="0">
-        <tr>
-            <td colspan="7" class="sub_title" >全网刷新速度　小于10毫秒
-            <br>
-                <hr class="blue" />
+				/* background: url('vc2.jpeg') no-repeat;
+				background-size: cover;
+				background-position: center; */
+			}
+			
+			
 
-            <span style="display: inline-block;font-size: 16px;color: #6a6a6f;line-height: 28px;padding-top: 10px;">
-                踢开全球设计师的大门<br>
-                支持: Behance，Pinterest，Dribbble，Artstation，Instagram……<br>
-                加速全球100+设计网站，只需10毫秒
-            </span>
-            </td>
-        </tr>
-        <tr class="tr_logo"  >
-            <td>&nbsp;</td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/4-300x300.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/1-300x300.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/artstation.png" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/3-300x300.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/2-300x300.jpg" width="58"></td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr class="tr_logo"  >
-            <td>&nbsp;</td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/61316.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/61504-300x253.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/13161048.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/160909.jpg" width="58"></td>
-            <td><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/13160647.jpg" width="58"></td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
 
-</div>
-<div><hr style="border: none;background-color: #eee;padding-top: 1px;margin: 50px 0 30px 0;" /></div>
-<div>
-    <table style="width:980px;margin:0 auto;" border="0" cellspacing="8">
-        <tr>
-            <td colspan="3" class="sub_title">英雄不问出处　谁能弯道超车
-                <br>
-                <hr class="blue"  />
+			#container {
+				height: 100%;
+			}
 
-                <span style="display: inline-block;font-size: 16px;color: #6a6a6f;line-height: 28px;padding-top: 10px;">
-                设计师必备站点：Behance，Pinterest，Dribbble，Artstation，Instagram……<br>
-                翻译工具、教学视频、最好的浏览器，是每个设计师超车必备神器。
-            </span>
-            </td>
-        </tr>
-        <tr style="text-align: center;color: #fff">
-            <td class="td_card" >
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                <div class="card_con" style="background-color: #F9562A;">
-                    <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/be_1.png"></div>
-                    <div class="card_title" >图形设计</div>
-                    <div class="card_desc" >排版/包装/品牌推广/信息图表/海报/图形设计/展览和标牌/徽章等/最出色的设计作品，包括海报、徽标、品牌宣传等内容</div>
-                </div>
-                <div style="height: 280px;background-color: #A358FD;"><div class="card_title1" >不知有Be&nbsp;&nbsp;木有逼格<br><span class="card_desc1" >海报设计</span></div></div>
-                </div>
-                </div>
-            </td>
-            <td class="td_card">
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #F9A528">
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/pin_1.png"></div>
-                        <div class="card_title" >摄影风景</div>
-                        <div class="card_desc" >摄影/修图/新闻摄影/汽车摄影/风景摄影/从工作室肖像到史诗般的高山景观，浏览最出色的摄影作品、润饰和摄影</div>
-                    </div>
-                    <div style="height: 280px;background-color: #E761E4;"><div class="card_title1" >不上P站&nbsp;&nbsp;枉称设计<br><span class="card_desc1" >广告灵感</span></div></div>
-                </div>
-                </div>
-            </td>
-            <td class="td_card">
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #E0DB44" >
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/adobe_1.png"></div>
-                        <div class="card_title" >插图艺术</div>
-                        <div class="card_desc" >插图/人物设计/数码艺术/素描/动漫/服饰/平面设计/查看各种形式的插图作品，包括素描簿、壁画、字符设计等各类内容</div>
-                    </div>
-                    <div style="height: 280px;background-color: #A358FD;"><div class="card_title1" >无人不知&nbsp;&nbsp;无人不晓<br><span class="card_desc1" >产品设计</span></div></div>
-                </div>
-                </div>
-            </td>
-        </tr>
-        <tr style="text-align: center;color: #fff">
-            <td class="td_card" >
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #5892F3;">
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/steam_1.png"></div>
-                        <div class="card_title" >手工艺/游戏</div>
-                        <div class="card_desc" >纸制品/陶瓷/木质品/人偶/游戏/场景/地图/了解如何构建设计精良的游戏 - 从动画到人物设计到3D模型建设</div>
-                    </div>
-                    <div style="height: 280px;background-color: #E0DB44;"><div class="card_title1" >游戏探索&nbsp;&nbsp;玩家基地<br><span class="card_desc1" >原图高清</span></div></div>
-                </div>
-                </div>
-            </td>
-            <td class="td_card">
-                <div style="overflow:  hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #5EC4F1">
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/photo_1.png"></div>
-                        <div class="card_title" >动画图像</div>
-                        <div class="card_desc" >动态图像设计/胶片/套装/道具/服装/GIF/风格构建/观看令人惊叹的电影短片、动态图形合辑以及极为有趣的动画 GIF</div>
-                    </div>
-                    <div style="height: 280px;background-color: #F9A528;"><div class="card_title1" >Ins照片墙&nbsp;&nbsp;美妙有趣<br><span class="card_desc1" >矢量素材</span></div></div>
-                </div>
-                </div>
-            </td>
-            <td class="td_card">
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #70DC49" >
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/dribbble_1.png"></div>
-                        <div class="card_title" >交互界面</div>
-                        <div class="card_desc" >图标设计/用户界面/用户体验/灵感/查找精选的交互设计作品，包括前沿的 UI/UX 设计和详细的图解等</div>
-                    </div>
-                    <div style="height: 280px;background-color: #A358FD;"><div class="card_title1" >发现美感&nbsp;&nbsp;设计之家<br><span class="card_desc1" >3D绘画</span></div></div>
-                </div>
-                </div>
-            </td>
-        </tr>
-        <tr style="text-align: center;color: #fff">
-            <td class="td_card" >
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #A358FD; ">
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/google_1.png"></div>
-                        <div class="card_title" >产品设计</div>
-                        <div class="card_desc" >工业设计/珠宝/家具/汽车设计/可视化/浏览汽车/珠宝/玩具/印刷/交互/广告等领域的真实存在的产品和最具吸引力的文案</div>
-                    </div>
-                    <div style="height: 280px;background-color: #70DC49;"><div class="card_title1" >全球最大&nbsp;&nbsp;网罗世界<br><span class="card_desc1" >原图高清</span></div></div>
-                    </div>
-                </div>
-            </td>
-            <td class="td_card">
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #E761E4">
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/play_1.png"></div>
-                        <div class="card_title" >时尚美术</div>
-                        <div class="card_desc" >纺织/时尚/成衣/化妆/建模/时尚/雕塑/绘画/绘图/时尚修饰/立即浏览时尚领域的前沿资讯和各类最具创意的艺术集合</div>
-                    </div>
-                    <div style="height: 280px;background-color: #33B7F2;"><div class="card_title1" >视频教学&nbsp;&nbsp;包罗万象<br><span class="card_desc1" >创意挑战</span></div></div>
-                    </div>
-                </div>
-            </td>
-            <td class="td_card">
-                <div style="overflow: hidden;height: 280px;">
-                    <div class="card_full" >
-                    <div class="card_con" style="background-color: #FC5AAB" >
-                        <div class="card"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/chrome_1.png"></div>
-                        <div class="card_title" >建筑室内</div>
-                        <div class="card_desc" >建筑/室内设计/建筑摄影/建筑可视化/园林设计/城市规划/公园/住宅内景/未来城市 - 立即浏览最佳室内设计、建筑摄影</div>
-                    </div>
-                    <div style="height: 280px;background-color: #5892F3;"><div class="card_title1" >稳定安全&nbsp;&nbsp;功能强大<br><span class="card_desc1" >插画大图</span></div></div>
-                </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" style="text-align: center;color:#6a6a6f;font-size: 16px;padding-top: 10px;"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/946-300x284.png"><br>Pinterest，Behance 最快最爽用菜刀</td>
-        </tr>
-    </table>
-</div>
-<div><hr style="border: none;background-color: #eee;padding-top: 1px;margin: 50px 0 30px 0;" /></div>
+			#overlay {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.5);
+			}
 
-<div style="margin-bottom: 50px;">
-    <table style="width:980px;margin:0 auto" border="0">
-        <tr>
-            <td colspan="3" class="sub_title" >他们都在使用及推荐
-                <br>
-                <hr class="blue" />
-            </td>
-        </tr>
-        <tr style="text-align: center;">
-            <td style="width: 33%;padding-left: 10px;">
-                <div class="comment_con" >
-                    Behance、Pinterest、Dribbble这三大设计师的必备平台。【菜刀】为设计师带来了优秀的设计工具。推荐设计师人手一把菜刀，好工具当然推荐!
-                    <div style="padding-top: 20px;padding-left: 80px;"><div style="float: left"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/14115942.jpg" style="width: 56px;height: 56px;border-radius: 28px;"></div><div class="comment_author" ><b>李楠</b><br><span style="font-size: 14px;color: #999">Nan Li</span></div></div>
-                </div>
-            </td>
-            <td style="width: 33%;padding-left: 10px;">
-                <div class="comment_con" >
-                    做为世界设计艺术家殿堂的Behance给予我们的不只是灵感和创意，更多的是生活和态度。我推荐使用【菜刀】来打开设计和艺术之门，每个设计师必备!
-                    <div style="padding-top: 20px;padding-left: 80px;"><div style="float: left"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/4120024.jpg" style="width: 56px;height: 56px;border-radius: 28px;"></div><div class="comment_author" ><b>裴颖</b><br><span style="font-size: 14px;color: #999">Ying Pei</span></div></div>
-                </div>
-            </td>
-            <td style="width: 33%;padding-left: 10px;">
-                <div class="comment_con" >
-                    Behance是一个著名的设计师作品分享与交流平台，也是众多设计师开拓国际视野、提升设计审美、以及寻找灵感的聚集地之一，推荐使用【菜刀】访问!
-                    <div style="padding-top: 20px;padding-left: 60px;"><div style="float: left"><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/120445.jpg" style="width: 56px;height: 56px;border-radius: 28px;"></div><div class="comment_author" ><b>张卉山</b><br><span style="font-size: 14px;color: #999">Huishan Zhang</span></div></div>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
+			#main_content {
+				position: relative;
+				display: inline-block;
+				visibility: hidden;
 
-<div><hr style="border: none;background-color: #eee;padding-top: 1px;margin: 50px 0 30px 0;" /></div>
+				/* Vertical center */
+				top: 45%;
+				transform: translateY(-50%);
+				text-shadow: 0 0 0.3em #333, 0 0 0.3em #333;
 
-<div style="margin-bottom: 50px;">
-    <table style="width:980px;margin:0 auto" border="0">
-        <tr>
-            <td colspan="3"  class="sub_title" >立即开始免费试用
-                <br>
-                <hr class="blue"  />
-                <span style="display: inline-block;font-size: 16px;color: #6a6a6f;line-height: 28px;padding-top: 10px;">
-                菜刀是一款纯绿色软件，简单易用、灵活强大<br>
-                您可以免费试用30天，所有功能都不限制、无隐藏，让您可以尽情体验各种功能，更高效完成工作！<br>
-            </span>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding-left: 135px;padding-top: 15px;">
-                <div class="download_win"   ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/download.png" width="15">&nbsp;&nbsp;免费下载 windows 版 </div>
-                <div class="download_mac"   ><img src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/img/download.png" width="15">&nbsp;&nbsp;免费下载 MacOS 版 </div>
-                <div class="download_mobile"  >手机客户端 </div>
+			}
 
-            </td>
-        </tr>
-        <tr>
-            <td style="padding-left: 155px;font-size: 14px;color: #6a6a6f;padding-top: 10px;">
-                <div  style="width: 220px;float: left;">支持 Win7-Win10，64 位系统</div>
-                <div  style="width: 220px;float: left;margin: 0 50px 0 35px; ">支持 MacOS 10.12 ​以上系统</div>
-                <div  style="width: 220px;float: left;">安装电脑版后扫码​安装<div>
-            </td>
-        </tr>
-    </table>
-</div>
+			#main_content h1 {
+				/* text-transform: uppercase; */
+				font-weight: 600;
+				font-family: 'proxima-nova-condensed', Helvetica;
+				color: #fff;
+				font-size: 35px;
+			}
 
-<div style="background-color:#333;" name="teach">
-    <table style="width:980px;margin:0 auto" border="0">
-        <tr style="text-align: center;">
-            <td colspan="2" style="color: #fff;font-size: 20px;padding: 30px 0;">安装使用视频教程</td>
-        </tr>
-        <tr style="text-align: center;" class="video_con">
-            <td style="padding-right: 30px;"><div class="video_win" style=" background-color: #CA3B0C;float: right;">windows 安装视频</div></td>
-            <td style="padding-left: 30px;" ><div class="video_mac" style="background-color: #00ba97;float: left;">MacOS 安装视频</div></td>
+			#main_content .sub_head {
+				color: rgba(255, 255, 255, 0.85);
+				font-size: 28px;
+			}
 
-        </tr>
+			#main_content .info {
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 16px;
+				margin-top: 10px;
+			}
 
-    </table>
-    <hr style="background-color: #888;border: none;padding-top: 1px;margin-top: 50px;width: 95%">
-    <table style="width:980px;margin:0 auto" border="0">
-        <tr style="text-align: center;">
-            <td style="line-height: 50px;color: #fff;height: 50px;font-size: 13px;opacity: 0.7;">
-                © All rights reserved 2020 caidao
-            </td>
-        </tr>
-    </table>
+			#links {
 
-</div>
+				margin-top: 30px;
+			}
 
-</body>
-<script>
-    var numbers={};
+			#links a {
+				border: 2px solid rgba(255, 255, 255, 0.20);
+				border-radius: 25px;
+				font-size: 16px;
+				font-weight: bolder;
+				color: #FFFFFF;
+				letter-spacing: 2px;
+				text-decoration: none;
+				/* text-transform: uppercase; */
+				padding: 10px 25px;
+				display: inline-block;
+				margin-right: 15px;
+				text-shadow: none;
+			}
 
-    $('body').ready(function(){
-        bindAnchor('#a_intro');
-        bindAnchor('#a_teach');
-        bindAnchor('#div_start');
-        bindCard();
-        bindNum();
-        bindDownload();
-        bindVideo();
-    });
-    function bindVideo() {
-        $('.video_win').bind('click',function () {
-            showVideo('https://player.bilibili.com/player.html?aid=839043712&bvid=BV1154y1S7g6&cid=217151378&page=1');
-        });
-        $('.video_mac').bind('click',function () {
-            showVideo('https://player.bilibili.com/player.html?aid=626485789&bvid=BV1pt4y1X7Xs&cid=215932629&page=1');
-        });
-        $('.video_intro').bind('click',function () {
-            showVideo('<embed src="https://cdn.jsdelivr.net/gh/design-land/design-land.github.io/css/intro.mp4" width="800" height="450">',1,'800px','450px');
-        });
+			#links a:hover {
+				/* background-color: #8a7fff; */
+				background-color: #8a7fff;
+			}
+			
+			#links a:active {
+				background-color: #7a6fef;
+			}
+			
+			#linkdl a {
+				border: 2px solid rgba(255, 255, 255, 0.8);
+				border-radius: 25px;
+				font-size: 16px;
+				font-weight: bolder;
+				color: #FFFFFF;
+				letter-spacing: 2px;
+				text-decoration: none;
+				/* text-transform: uppercase; */
+				padding: 10px 25px;
+				display: inline-block;
+				margin-right: 15px;
+				text-shadow: none;
+				background-color: #8a7fff;
+			}
+			
+			#linkdl a:hover {
+				/* background-color: #8a7fff; */
+				background-color: #7a6fef;
+				border: 2px solid rgba(255, 255, 255, 1);
+			}
+			
+			#linkdl a:active {
+				background-color: #6a5fdf;
+			}
+			
+			#infoDl{
+				font-size: 20px;
+				line-height: 50px;
+				font-weight: lighter;
+				font-family: 'proxima-nova-condensed', Helvetica;
+			}
+			
+		
+			
+			#iconDl {
+				width: 22px;
+				height: 22px;
+				margin: 0px 2px -4px -8px;
+			}
+			
+			
+			
+			#helpDl{
+				opacity: 0;
+				padding-left: 60px;
+				font-size: 18px;
+				line-height: 20px;
+				font-weight: lighter;
+				font-family: 'proxima-nova-condensed', Helvetica;
+				text-align: left;
+			}
 
-    }
-    function bindDownload() {
-        $('.download_win').bind('click',function () {
-            downloadFile('win');
-        });
-        $('.download_mac').bind('click',function () {
-            downloadFile('mac');
-        });
-    }
-    function downloadFile(os) {
-        var filePath='https://cdn.jsdelivr.net/gh/caidao-bot/dist/setup/caidao_'+os+'.zip';
-        layer.open({
-            type: 2,
-            title: false,
-            area: ['530px', '310px'],
-            shade: 0.5,
-            closeBtn: 1,
-            shadeClose: false,
-            content: 'download_'+os+'.html'
-        });
 
-       setTimeout(function () {
-           var $eleForm = $("<form method='get'></form>");
-           $eleForm.attr("action",filePath);
-           $(document.body).append($eleForm);
-           $eleForm.submit();
-       },500);
+			#footer {
+				position: absolute;
+				bottom: 15px;
+				left: 0;
+				right: 0;
+				color: #fff;
+				text-align: center;
+				
+			}
 
-    }
-    function bindCard() {
-        $('.card_full').mouseenter(function () {
-            $(this).animate({top: '-280px'});
-        }).mouseleave(function () {
-            $(this).animate({top: '0px'});
-        });
-    }
-    function bindAnchor(objName){
-        $(objName).click(function(){
-            $('html, body').animate({
-                scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-            }, 500);
-            return false;
-        });
-    }
-    function bindNum() {
-        var timeDiff=parseInt(getTimeDiff() /1000);
-        numbers.all=timeDiff*2;
-        numbers.today=parseInt(getTodayDiff()*2.45);
-        numbers.user=parseInt(timeDiff /167);
-        $('.num_all').html(toThousands(numbers.all));
-        $('.num_today').html(toThousands(numbers.today));
-        $('.num_user').html(toThousands(numbers.user));
-        setInterval(function () {
-            if(parseInt(Math.random()*3)<1){
-                var add=parseInt(Math.random()*4);
-                numbers.all +=add;
-                numbers.today +=add;
-                //console.info(numbers.all);
-                $('.num_all').html(toThousands(numbers.all));
-                $('.num_today').html(toThousands(numbers.today));
+			 #footer div {
+				color: rgba(0, 0, 0, 0.3);
+				text-decoration: none;
+				padding: 10px 0px;
+				font-size: 16px;
+				display: inline;
+			}
 
-            }
-            if(parseInt(Math.random()*16)<1){
-                numbers.user +=1;
-                $('.num_user').html(toThousands(numbers.user));
-            }
-        },100);
-    }
-    function toThousands(num) {
-        var num = (num || 0).toString(), result = '';
-        while (num.length > 3) {
-            result = ',' + num.slice(-3) + result;
-            num = num.slice(0, num.length - 3);
-        }
-        if (num) { result = num + result; }
-        return result;
-    }
-    function getTimeDiff() {
-        var date1= '2020/01/01 00:00:00';
-        var date2 = new Date();
-        return date2.getTime() - new Date(date1).getTime();
-    }
-    function getTodayDiff(){
-        var date = new Date();
-        var m1 = date.getTime();
-        date.setHours(0);
-        date.setMinutes(0);
-        date.setSeconds(0);
-        var m0 = date.getTime();
-        return  (m1-m0)/1000;
-    }
-    function showVideo(url,type=2,width='600px',height='320px'){
-        layer.open({
-            type: type,
-            title: false,
-            area: [width, height],
-            shade: 0.5,
-            closeBtn: 1,
-            shadeClose: false,
-            content: url
-        });
-    }
-    
-</script>
+			/*
+			#footer div:first-child {
+				float: left;
+			} 
+
+			#footer div:last-child {
+				float: right;
+				text-align: right;
+			}
+			*/
+			.vjs-tech {
+				object-fit: cover;
+			}
+			
+			
+			#feedback {
+				position: absolute;
+				height: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				background: rgba(255, 255, 255, 0.9);
+				text-align: center;
+				
+				justify-content:center;
+				align-items:center;
+				display:flex;
+				
+			}
+			
+			#fcontainer{
+				position: relative;
+				margin-top: -50px;
+				width: 900px;
+				display: table;
+				/* float: left; */
+				visibility: hidden;
+			}
+			
+			#fcell-left{
+				display: table-cell;
+				min-width: 500px;
+				text-align: right;
+				letter-spacing: 2px;
+			}
+			
+			#fcell-right{
+				min-width: 400px;
+				display: table-cell;
+			}
+			
+			.chkList{
+				list-style: none;
+			}
+			
+			.chkItem{
+				white-space: nowrap;
+				display: inline;
+				justify-content:center;
+				
+			}
+			
+			.chkItem label{
+				display: inline;
+				line-height: 50px;
+				font-size: 36px;
+				font-weight: lighter;
+				font-family: 'proxima-nova-condensed', Helvetica;
+				color: #222;
+				cursor: pointer;
+				margin-right: 10px;
+			}
+			
+			.googlelogo{
+				letter-spacing: -1px;
+				font-weight: normal;
+				color: #555;
+			}
+			
+			.chkItem input{
+				display: inline;
+				line-height: 36px;
+				font-size: 30px;
+				cursor: pointer;
+			}
+			
+			input[type=checkbox] {
+				width:30px;
+				height:30px; 
+				text-align: center;
+			}
+						
+			input[type=checkbox]:after {
+				width: 100%;
+				height: 100%;
+				top: 0px;
+				content: " ";
+				background-color:White;
+				color: #000000;
+				display: inline-block;
+				/* visibility: hidden; */
+				border-radius: 8px;
+				border:2px solid #555;
+				margin: -2px 0 0 -2px;
+				
+			}
+			
+			input[type=checkbox][disabled=disabled]:after {
+				width: 100%;
+				height: 100%;
+				top: 0;
+				content: " ";
+				background-color:#DCDCDC;
+				color: #000000;
+				display: inline-block;
+				/* visibility: hidden; */
+				border-radius: 8px;
+				border:2px solid #A9A9A9;
+				margin: -2px 0 0 -2px;
+			}
+			
+			input[type=checkbox]:checked:after {
+				content: "\2713";/*UNICODE中对号*/
+				font-weight:bolder;
+				/* visibility: hidden; */
+				margin: -2px 0 0 -2px;
+				color: #8a7fff;
+			}
+		</style>
+		<script>
+			function showContent() {
+				document.getElementById('main_content').style.visibility = 'visible';
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<video id="background_video" class="video-js vjs-default-skin" loop preload="auto">
+				<!-- <source src="videos/bg.mp4.m3u8" type="application/x-mpegURL"> -->
+			</video>
+
+			<img id="video_cover" src="vc2.jpeg" onload="javascript:showContent();" />
+
+
+			<div id="overlay"></div>
+			<div id="mainlogo">CAIDAO</div>
+			<section id="main_content">
+				<div id="head">
+					<h1>秒开 Pinterest、Behance、Dribbble、Artstation、全球10000+设计网站</h1>
+					<p class="sub_head">中国设计师必备神器, 4000TB设计素材干货免费下载</p>
+					<p>&nbsp;</p>
+					<p class="info">(绿色免费免安装, 10秒开启尘封已久的设计世界)</p>
+				</div>
+				<div id="links">
+					<a id="btnTry" href="###">反手就是一个Try!</a>
+				</div>
+
+			</section>
+
+		</div>
+
+		<div id="feedback">
+			<form onsubmit="javascript:return false;">
+				<div id="fcontainer">
+					<div id="fcell-left">
+						<ul class="chkList">
+							<li class="chkItem"><label for="c1">快速打开全球设计类网站</label><input id="c1" class="chk" type="checkbox" checked></input></li>
+							<li class="chkItem"><label for="c2">免费下载海量收费资源</label><input id="c2" class="chk" type="checkbox"></input></li>
+							<li class="chkItem"><label for="c3">与更多的设计大神交流</label><input id="c3" class="chk" type="checkbox"></input></li>
+							<li class="chkItem"><label for="c4">使用 <span class="googlelogo">Google</span> 等国外网站</label><input id="c4" class="chk"
+								 type="checkbox"></input></li>
+						</ul>
+					</div>
+					<div id="fcell-right">
+						<p>&nbsp;</p>
+
+						<div id="linkdl">
+							<a id="btnDl" href="###"><img id="iconDl" align="top" src="icon.png" />立即下载</a>
+						</div>
+						<div id="infoDl">
+							<span id="dlTime">请从左侧选择你想要的功能</span>
+						</div>
+						<div id="helpDl">
+							下载即将开始，如果下载失败请发邮件至 “caidaohelp@yandex.ru”，即可获得。
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div id="footer">
+			<div>由菜刀©第五代加速器强力驱动！</div>
+			<div>沪ICP备12020887号</div>
+		</div>
+
+
+
+	</body>
+	<script>
+		/*========================================================*/
+		/* Light Loader
+		/*========================================================*/
+		var lightLoader = function(c, cw, ch) {
+
+			var _this = this;
+			this.c = c;
+			this.ctx = c.getContext('2d');
+			this.cw = cw;
+			this.ch = ch;
+
+			this.loaded = 0;
+			this.loaderSpeed = .6;
+			this.loaderHeight = 10;
+			this.loaderWidth = 310;
+			this.loader = {
+				x: (this.cw / 2) - (this.loaderWidth / 2),
+				y: (this.ch / 2) - (this.loaderHeight / 2)
+			};
+			this.particles = [];
+			this.particleLift = 180;
+			this.hueStart = 0
+			this.hueEnd = 120;
+			this.hue = 0;
+			this.gravity = .15;
+			this.particleRate = 4;
+
+			/*========================================================*/
+			/* Initialize
+			/*========================================================*/
+			this.init = function() {
+				this.loop();
+			};
+
+			/*========================================================*/
+			/* Utility Functions
+			/*========================================================*/
+			this.rand = function(rMi, rMa) {
+				return ~~((Math.random() * (rMa - rMi + 1)) + rMi);
+			};
+			this.hitTest = function(x1, y1, w1, h1, x2, y2, w2, h2) {
+				return !(x1 + w1 < x2 || x2 + w2 < x1 || y1 + h1 < y2 || y2 + h2 < y1);
+			};
+
+			/*========================================================*/
+			/* Update Loader
+			/*========================================================*/
+			this.updateLoader = function() {
+				if (this.loaded < 100) {
+					this.loaded += this.loaderSpeed;
+				} else {
+					this.loaded = 0;
+				}
+			};
+
+			/*========================================================*/
+			/* Render Loader
+			/*========================================================*/
+			this.renderLoader = function() {
+				this.ctx.fillStyle = '#000';
+				this.ctx.fillRect(this.loader.x, this.loader.y, this.loaderWidth, this.loaderHeight);
+
+				this.hue = this.hueStart + (this.loaded / 100) * (this.hueEnd - this.hueStart);
+
+				var newWidth = (this.loaded / 100) * this.loaderWidth;
+				this.ctx.fillStyle = 'hsla(' + this.hue + ', 100%, 40%, 1)';
+				this.ctx.fillRect(this.loader.x, this.loader.y, newWidth, this.loaderHeight);
+
+				this.ctx.fillStyle = '#222';
+				this.ctx.fillRect(this.loader.x, this.loader.y, newWidth, this.loaderHeight / 2);
+			};
+
+			/*========================================================*/
+			/* Particles
+			/*========================================================*/
+			this.Particle = function() {
+				this.x = _this.loader.x + ((_this.loaded / 100) * _this.loaderWidth) - _this.rand(0, 1);
+				this.y = _this.ch / 2 + _this.rand(0, _this.loaderHeight) - _this.loaderHeight / 2;
+				this.vx = (_this.rand(0, 4) - 2) / 100;
+				this.vy = (_this.rand(0, _this.particleLift) - _this.particleLift * 2) / 100;
+				this.width = _this.rand(1, 4) / 2;
+				this.height = _this.rand(1, 4) / 2;
+				this.hue = _this.hue;
+			};
+
+			this.Particle.prototype.update = function(i) {
+				this.vx += (_this.rand(0, 6) - 3) / 100;
+				this.vy += _this.gravity;
+				this.x += this.vx;
+				this.y += this.vy;
+
+				if (this.y > _this.ch) {
+					_this.particles.splice(i, 1);
+				}
+			};
+
+			this.Particle.prototype.render = function() {
+				_this.ctx.fillStyle = 'hsla(' + this.hue + ', 100%, ' + _this.rand(50, 70) + '%, ' + _this.rand(20, 100) / 100 +
+					')';
+				_this.ctx.fillRect(this.x, this.y, this.width, this.height);
+			};
+
+			this.createParticles = function() {
+				var i = this.particleRate;
+				while (i--) {
+					this.particles.push(new this.Particle());
+				};
+			};
+
+			this.updateParticles = function() {
+				var i = this.particles.length;
+				while (i--) {
+					var p = this.particles[i];
+					p.update(i);
+				};
+			};
+
+			this.renderParticles = function() {
+				var i = this.particles.length;
+				while (i--) {
+					var p = this.particles[i];
+					p.render();
+				};
+			};
+
+			/*========================================================*/
+			/* Clear Canvas
+			/*========================================================*/
+			this.clearCanvas = function() {
+				this.ctx.globalCompositeOperation = 'source-over';
+				this.ctx.clearRect(0, 0, this.cw, this.ch);
+				this.ctx.globalCompositeOperation = 'lighter';
+			};
+
+			/*========================================================*/
+			/* Animation Loop
+			/*========================================================*/
+			this.loop = function() {
+				var loopIt = function() {
+					requestAnimationFrame(loopIt, _this.c);
+					_this.clearCanvas();
+
+					_this.createParticles();
+
+					_this.updateLoader();
+					_this.updateParticles();
+
+					_this.renderLoader();
+					_this.renderParticles();
+
+				};
+				loopIt();
+			};
+
+		};
+
+		/*========================================================*/
+		/* Check Canvas Support
+		/*========================================================*/
+		var isCanvasSupported = function() {
+			var elem = document.createElement('canvas');
+			return !!(elem.getContext && elem.getContext('2d'));
+		};
+
+		/*========================================================*/
+		/* Setup requestAnimationFrame
+		/*========================================================*/
+		var setupRAF = function() {
+			var lastTime = 0;
+			var vendors = ['ms', 'moz', 'webkit', 'o'];
+			for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+				window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+				window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] +
+					'CancelRequestAnimationFrame'];
+			};
+
+			if (!window.requestAnimationFrame) {
+				window.requestAnimationFrame = function(callback, element) {
+					var currTime = new Date().getTime();
+					var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+					var id = window.setTimeout(function() {
+						callback(currTime + timeToCall);
+					}, timeToCall);
+					lastTime = currTime + timeToCall;
+					return id;
+				};
+			};
+
+			if (!window.cancelAnimationFrame) {
+				window.cancelAnimationFrame = function(id) {
+					clearTimeout(id);
+				};
+			};
+		};
+
+		/*========================================================*/
+		/* Define Canvas and Initialize
+		/*========================================================*/
+		if (isCanvasSupported) {
+			var c = document.createElement('canvas');
+
+			c.width = 1366;
+			c.height = 720;
+			var cw = c.width;
+			var ch = c.height;
+			document.body.appendChild(c);
+			c.zindex = -1;
+			var cl = new lightLoader(c, cw, ch);
+
+			setupRAF();
+			cl.init();
+
+		}
+	</script>
+
+	<script>
+		function showTryContent(e) {
+
+			$('#feedback').animate({
+				height: '55%'
+			}, 'fast', function(e) {
+				$('#overlay').css('background', 'rgba(0,0,0,0.7)');
+				$('#fcontainer *').css('visibility', 'visible');
+				$('#fcontainer').css('visibility', 'visible');
+				$('#links').css('visibility', 'hidden');
+				$('#main_content .info').css('visibility', 'hidden');
+				$('#helpDl').css('opacity', '0');
+			});
+
+			// player.pause();
+		}
+
+		function hideTryContent(e) {
+
+			let h = $('#feedback').height();
+			console.log(h)
+			if (h == 0) {
+				console.log(1);
+				return
+			}
+			console.log(2);
+			$('#links').css('visibility', 'visible');
+			$('#main_content .info').css('visibility', 'visible');
+
+			$('#fcontainer *').css('visibility', 'hidden');
+			$('#fcontainer').css('visibility', 'hidden');
+			$('#feedback').animate({
+				height: '0'
+			}, 'fast', function() {
+				$('#overlay').css('background', 'rgba(0,0,0,0.5)');
+			});
+
+			player.play();
+
+		}
+	</script>
+
+	<script type='text/javascript' src='jquery.min.js'></script>
+	<!-- <script type='text/javascript' src='jquery.easing.min.js'></script> -->
+	<link type='text/css' rel='stylesheet' href='video-js.min.css'>
+	<script type='text/javascript' src='video.min.js'></script>
+	<!-- <script id='vjstream' type='text/javascript' src='videojs-http-streaming.min.js'></script> -->
+	<script>
+		var player = {};
+		$(window).load(function() {
+			console.log("window load");
+		});
+
+		$('#btnTry').on('click', function(e) {
+			console.log("try button clicked");
+			showTryContent(e)
+
+		});
+
+		$('.chk').change(function() {
+			let t = 0;
+			if ($('#c1').is(':checked')) {
+				t += 10;
+			}
+			if ($('#c2').is(':checked')) {
+				t += 6;
+			}
+			if ($('#c3').is(':checked')) {
+				t += 7;
+			}
+			if ($('#c4').is(':checked')) {
+				t += 5;
+			}
+			if (t == 0) {
+				$("#dlTime").text('请从左侧选择你想要的功能');
+			} else {
+				$("#dlTime").text('预计下载时间 ' + t + ' 秒');
+			}
+		});
+
+		$('#btnDl').on('click', function(e) {
+			console.log("dl button clicked");
+
+			var ua = navigator.userAgent.toLowerCase();
+			var dlUrl = "";
+			if (ua.indexOf("windows") != -1) {
+
+				dlUrl = "https://cdn.jsdelivr.net/gh/caidao-bot/dist/setup/caidao_win.zip";
+			} else {
+				dlUrl = "https://cdn.jsdelivr.net/gh/caidao-bot/dist/setup/caidao_mac.zip";
+			}
+			// chk
+
+			$('#helpDl').animate({
+				opacity: 0.8
+			}, 'fast');
+
+			setTimeout(function() {
+				var $eleForm = $("<form method='get'></form>");
+				$eleForm.attr("action", dlUrl);
+				$(document.body).append($eleForm);
+				$eleForm.submit();
+			}, 1000);
+
+		});
+
+
+
+		$('#overlay,#main_content').on('click', function(e) {
+			hideTryContent(e);
+		})
+
+		$(document).ready(function() {
+			console.log("document ready");
+
+			var ua = navigator.userAgent.toLowerCase();
+			if (ua.indexOf("iphone") == -1 && ua.indexOf("android") == -1) {
+
+				player = window.player = videojs('background_video', {
+					autoplay: 'any',
+					repeat: true,
+					loop: true,
+					preload: 'auto',
+				});
+
+				player.ready(function() {
+
+					this.on('loadedmetadata', function() {
+						$('#video_cover').remove();
+						$('#overlay').css('background', 'rgba(0,0,0,0.5)');
+					})
+				});
+
+				player.src({
+					type: 'application/x-mpegURL',
+					src: 'videos/bg.mp4.m3u8'
+				});
+
+			} else {
+				$('#background_video').remove();
+			}
+		});
+
+		function loadScript(url, callback) {
+			let script = document.createElement('script');
+			if (script.readyState) { // IE
+				script.onreadystatechange = function() {
+					if (script.readyState === 'loaded' || script.readyState === 'complete') {
+						script.onreadystatechange = null;
+						callback();
+					}
+				}
+			} else { // 其他浏览器
+				script.onload = function() {
+					callback();
+				}
+			}
+			script.src = url;
+			document.getElementsByTagName('head')[0].appendChild(script);
+
+		}
+	</script>
+
+
+
 </html>
-
-
-
